@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item android:title="A1"
+            android:id="@+id/item1"
+            android:onClick="A1_start"/>
+
+        <item android:title="A2"
+            android:id="@+id/item2"/>
+
+        <item android:title="A3"
+            android:id="@+id/item3"
+            android:onClick="sosi"/>
+
+    </group>
+    <group>
+        <item android:title="A4"
+            android:id="@+id/item4"/>
+
+        <item android:title="A5"
+            android:id="@+id/item5"/>
+
+        <item android:title="A6 или чё там"
+            android:id="@+id/item6"
+            android:onClick="pidor"/>
+
+    </group>
+
+</menu>
