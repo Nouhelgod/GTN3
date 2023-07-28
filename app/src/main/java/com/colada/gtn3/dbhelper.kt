@@ -68,10 +68,13 @@ class dbhelper(context: Context?) :
         Log.d("dbhelper", sql)
         val q = db.rawQuery(sql, args, null)
         q.moveToFirst()
-        val rightAnswer = q.getString(0)
+        var rightAnswerStr = q.getString(0)
+        var rightAnswerInt = rightAnswerStr.toInt() - 1
+        rightAnswerStr = rightAnswerInt.toString()
+
         q.close()
 
-        return rightAnswer
+        return rightAnswerStr
     }
 
 
