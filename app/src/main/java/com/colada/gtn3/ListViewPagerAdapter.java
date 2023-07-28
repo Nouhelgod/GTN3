@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
+import com.colada.gtn3.fragments.PlaceholderFragment;
 import com.colada.gtn3.fragments.SaveExpFragment;
 
 public class ListViewPagerAdapter extends FragmentStateAdapter {
@@ -23,7 +24,7 @@ public class ListViewPagerAdapter extends FragmentStateAdapter {
             case 0:
                 return new SaveExpFragment();
             case 1:
-                return new SaveExpFragment();
+                return new PlaceholderFragment();
             default:
                 return new SaveExpFragment();
         }

@@ -15,14 +15,10 @@ class MainActivity : ComponentActivity() {
         setContentView(R.layout.view_main)
     }
 
-    fun sosi(item: MenuItem) {
-        Toast.makeText(this, "kill urself" , Toast.LENGTH_SHORT).show()
+    fun placeholderToast(item: MenuItem) {
+        Toast.makeText(this, "Скоро будет" , Toast.LENGTH_SHORT).show()
     }
 
-    fun pidor(item: MenuItem) {
-        val d = Log.d("d", "UEBOK!!!!")
-        startActivity(Intent(this, view_tickets_list::class.java))
-    }
 
     fun A1_start(item: MenuItem) {
         val intent = Intent(this, view_tickets_list::class.java)

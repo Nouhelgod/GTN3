@@ -6,6 +6,7 @@
     android:layout_width="240dp"
     android:layout_height="240dp"
     android:layout_gravity="center"
+    android:padding="15dp"
     tools:context=".PopupComment"
     android:background="@color/cardview_light_background">
 
@@ -13,7 +14,7 @@
         android:id="@+id/popup_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        android:text="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,10 +23,9 @@
         android:id="@+id/popup_continue_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="continue"
+        android:text="@string/button_continue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/popup_text"
         app:layout_constraintVertical_bias="0.789" />

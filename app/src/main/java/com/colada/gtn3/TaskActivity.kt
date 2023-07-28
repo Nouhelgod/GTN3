@@ -43,7 +43,13 @@ class TaskActivity : AppCompatActivity() {
 
     fun nextQuestion() {
         currentQuestionNum += 1
-        buildTask()
+
+        if (currentQuestionNum != 9) {
+            buildTask()
+        } else {
+            finish()
+        }
+
     }
 
 
