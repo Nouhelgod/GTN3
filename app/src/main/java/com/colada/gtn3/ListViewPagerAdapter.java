@@ -25,6 +25,8 @@ public class ListViewPagerAdapter extends FragmentStateAdapter {
                 return new SaveExpFragment();
             case 1:
                 return new PlaceholderFragment();
+            case 2:
+                return new PlaceholderFragment();
             default:
                 return new PlaceholderFragment();
         }
@@ -32,6 +34,6 @@ public class ListViewPagerAdapter extends FragmentStateAdapter {
 
     @Override
     public int getItemCount() {
-        return 2;
+        return 3;
     }
 }

@@ -12,5 +12,6 @@
     <string name="main">Свайп чтобы выбрать категорию (меню слева)</string>
     <string name="safe_expluatation">Безопасная эксплуатация</string>
     <string name="expluatation">Эксплуатация</string>
+    <string name="pdd">ПДД</string>
 
 </resources>
