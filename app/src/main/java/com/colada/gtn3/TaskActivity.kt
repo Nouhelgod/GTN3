@@ -2,6 +2,7 @@ package com.colada.gtn3
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
@@ -56,6 +57,9 @@ class TaskActivity : AppCompatActivity() {
     fun buildTask() {
         task.getTask(globalData.currentCategory, globalData.currentTicket, currentQuestionNum)
         questionTextView.text = task.question
+        imageView.setImageBitmap(
+            BitmapFactory.decodeByteArray(task.image, 0, task.image.size)
+        )
         Log.d("TASK", "Right answer: ${task.rightAnswer}")
 
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, task.answers)

@@ -14,7 +14,7 @@ class dbhelper(context: Context?) :
     private var db = writableDatabase
 
     companion object {
-        private const val DATABASE_NAME = "tickets.db"
+        private const val DATABASE_NAME = "tickets1.db"
         private const val DATABASE_VERSION = 2
     }
 
@@ -96,7 +96,7 @@ class dbhelper(context: Context?) :
     }
 
     fun getQuestionsCount(category: String, ticketNum: String): Int {
-        val sql = "select distinct questionNum from " + category + "where ticketNum = ?"
+        val sql = "select distinct questionNum from $category where ticketNum = ?"
         Log.d("dbhelper", sql)
         val args = arrayOf(ticketNum)
         val q = db.rawQuery(sql, args, null)
@@ -105,5 +105,17 @@ class dbhelper(context: Context?) :
         q.close()
         return count
 
+    }
+
+    fun getImage(category: String, ticketNum: String): ByteArray {
+        val sql = "select pic from $category where ticketNum = ?"
+        Log.d("dbhelper", sql)
+        val args = arrayOf(ticketNum)
+        val q = db.rawQuery(sql, args, null)
+        val colind = q.getColumnIndex("pic")
+        Log.d("dbhelper", "$colind=")
+        val pic = q.getBlob(colind)
+        q.close()
+        return pic
     }
 }

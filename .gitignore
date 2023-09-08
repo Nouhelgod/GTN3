@@ -13,3 +13,5 @@
 .externalNativeBuild
 .cxx
 local.properties
+GTN_python/src/A1_pics
+GTN_python/VirtualEnv

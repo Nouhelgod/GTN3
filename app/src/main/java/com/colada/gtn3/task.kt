@@ -12,7 +12,7 @@ class task(private val context: Context) {
     lateinit var description: String
     lateinit var answers: List<String>
     lateinit var rightAnswer: String
-    lateinit var image: Bitmap
+    lateinit var image: ByteArray
 
     var questionsCount = 0
     val db = dbhelper(context)
@@ -24,6 +24,7 @@ class task(private val context: Context) {
         description = db.getDescription(cat, ticketNum, questionNum)
         answers = db.getAnswers(cat, ticketNum, questionNum)
         rightAnswer = db.getRightAnswer(cat, ticketNum, questionNum)
+        image = db.getImage(cat, ticketNum)
     }
 
     fun getQuestionCount(cat: String, ticketNum: Int): Int {
